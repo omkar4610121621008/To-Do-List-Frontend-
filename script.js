@@ -2,7 +2,7 @@ const resultsArray = []
 
 const createUser = async () => {
     try {
-        const response = await fetch("http://localhost:5000/User/", {
+        const response = await fetch("https://todolist-1z4h.onrender.com/User", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -18,7 +18,7 @@ const createUser = async () => {
 
 const getAllusers = async () => {
     try {
-        const response = await fetch("http://localhost:5000/User/")
+        const response = await fetch("https://todolist-1z4h.onrender.com/User")
         const data = await response.json()
         console.log(data)
         return data.users
